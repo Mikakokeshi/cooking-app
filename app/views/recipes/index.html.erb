@@ -2,14 +2,24 @@
 <h1>My Recipes</h1>
 <table>
   <% @recipes.each do |recipe| %>
-    <tr>
-      <td><%= recipe.title %></td>
-      <td><%= recipe.content %></td>
-      <td><%= link_to "View", recipe_path(recipe) %></td>
-      <td><%= link_to "Edit", edit_recipe_path(recipe) %></td>
-      <td><%= link_to "Delete", recipe_path(recipe), 
-                                method: :delete,
-                                data: { confirm: "Are you sure?" } %></td>
-    </tr>
+    <div class="row">
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <img src="..." alt="...">
+        </div> 
+        <div class="caption">
+          <p><%= recipe.title %></p>
+          <p><%= recipe.content %></p>
+          <p><%= link_to "View", recipe_path(recipe), class: "btn btn-primary"%>       
+             <%= link_to "Delete", recipe_path(recipe), 
+                                   method: :delete,
+                                   data: { confirm: "Are you sure?" },
+                                   class: "btn btn-default" %>
+          </p>
+      </div>
+    </div>
   <% end %>
 </table>
+
+
+
