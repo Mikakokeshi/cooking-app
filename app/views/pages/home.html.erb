@@ -13,11 +13,13 @@
         <div class="caption">
           <p><%= recipe.title %></p>
           <p><%= recipe.content %></p>
-          <p><%= link_to "View", recipe_path(recipe), class: "btn btn-primary"%>       
+          <p><%= link_to "View", recipe_path(recipe), class: "btn btn-primary"%>
+          <% if current_user[:id] == recipe[:user_id] %>
              <%= link_to "Delete", recipe_path(recipe), 
                                    method: :delete,
                                    data: { confirm: "Are you sure?" },
                                    class: "btn btn-default" %>
+          <% end %>
           </p>
         </div>
       </div>
