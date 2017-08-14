@@ -3,39 +3,26 @@
   <h1>Home</h1>
   <p>This is the header</p>
 </div>
-<div class="row">
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="..." alt="...">
-      <div class="caption">
-        <h3>Thumbnail label</h3>
-        <p>...</p>
-        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+<% @recipes.each_slice(3) do |recipes| %>
+  <div class="row">
+    <% recipes.each do |recipe| %>
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <img src="..." alt="...">
+        </div> 
+        <div class="caption">
+          <p><%= recipe.title %></p>
+          <p><%= recipe.content %></p>
+          <p><%= link_to "View", recipe_path(recipe), class: "btn btn-primary"%>       
+             <%= link_to "Delete", recipe_path(recipe), 
+                                   method: :delete,
+                                   data: { confirm: "Are you sure?" },
+                                   class: "btn btn-default" %>
+          </p>
+        </div>
       </div>
-    </div>
+    <% end %>
   </div>
-  
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="..." alt="...">
-      <div class="caption">
-        <h3>Thumbnail label</h3>
-        <p>...</p>
-        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="..." alt="...">
-      <div class="caption">
-        <h3>Thumbnail label</h3>
-        <p>...</p>
-        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-      </div>
-    </div>
-  </div>
-</div>
+<% end %>
 
 
