@@ -1,0 +1,28 @@
+<%= form_for(@recipe) do |f| %>
+  <% if @recipe.errors.any? %>
+  <div class="alert alert-danger" role="alert">
+    <p>
+      <%= pluralize(@recipe.errors.count, "error") %> prohibited this recipe from being posted:
+    </p>
+    
+    <ul>
+      <% @recipe.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :content %><br>
+    <%= f.text_area :content %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+
