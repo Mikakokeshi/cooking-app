@@ -1,11 +1,16 @@
 class User < ActiveRecord::Base
   has_many :recipes, dependent: :destroy
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
+  
+  mount_uploader :avatar, AvatarUploader
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, :omniauth_providers => [:facebook]
 
+  # User Avatar Validation
+  validates_integrity_of  :avatar
+  validates_processing_of :avatar
+ 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.email = auth.info.email
@@ -17,4 +22,9 @@ class User < ActiveRecord::Base
       # user.skip_confirmation!
     end
   end
+  
+    private
+    def avatar_size_validation
+      errors[:avatar] << "should be less than 500KB" if avatar.size > 0.5.megabytes
+    end
 end

@@ -14,3 +14,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "devise_bootstrap_views";
+
+#avatar {
+    width: 30px;
+    height: 30px;
+    margin-right: 4px;
+    border-radius: 100%;
+}

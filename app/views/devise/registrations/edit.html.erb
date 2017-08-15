@@ -21,6 +21,17 @@
         <%= f.label :current_password %> <i>(<%= t('.we_need_your_current_password_to_confirm_your_changes', default: 'we need your current password to confirm your changes') %>)</i>
         <%= f.password_field :current_password, class: 'form-control' %>
       </div>
+      <div class="form-group">
+        <%= f.label :avatar do %>
+        <%= f.file_field :avatar %>
+        <%= f.hidden_field :avatar_cache %>
+          <% if f.object.avatar? %>
+            <%= image_tag f.object.image.thumb.url %>
+            <%= f.label :remove_image %>
+            <%= f.check_box :remove_image %> 
+          <% end %>
+        <% end %>
+      </div>
       <%= f.submit t('.update', default: 'Update'), class: 'btn btn-primary' %>
     <% end %>
   </div>
