@@ -1,8 +1,6 @@
-<% provide(:title, 'Home') %>
-<div class="page-header">
-  <h1>Home</h1>
-  <p>This is the header</p>
-</div>
+<% provide(:title, "My Recipes") %>
+<h1>My Recipes</h1>
+
 <% @recipes.each_slice(3) do |recipes| %>
   <div class="row">
     <% recipes.each do |recipe| %>
@@ -13,18 +11,19 @@
         <div class="caption">
           <p><%= recipe.title %></p>
           <p><%= recipe.content %></p>
-          <p><%= link_to "View", recipe_path(recipe), class: "btn btn-primary"%>
-          <% if current_user[:id] == recipe[:user_id] %>
+          <p><%= link_to "View", recipe_path(recipe), class: "btn btn-primary"%>       
              <%= link_to "Delete", recipe_path(recipe), 
                                    method: :delete,
                                    data: { confirm: "Are you sure?" },
                                    class: "btn btn-default" %>
-          <% end %>
           </p>
         </div>
       </div>
     <% end %>
   </div>
 <% end %>
+
+
+
 
 
