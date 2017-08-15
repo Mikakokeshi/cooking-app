@@ -12,15 +12,15 @@
     </ul>
   </div>
 <% end %>
-  <p>
+  <div class="form-group">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </p>
-  <p>
+    <%= f.text_field :title, autofocus: true, class: "form-control" %>
+  </div>
+  <div class="form-group">
     <%= f.label :content %><br>
-    <%= f.text_area :content %>
-  </p>
-  <div class="field">
+    <%= f.text_area :content, class: "form-control" %>
+  </div>
+  <div class="form-group">
     <%= f.label :image %><br>
     <%= f.file_field :image %>
     <% if f.object.image? %>
@@ -29,9 +29,9 @@
       <%= f.check_box :remove_image %> 
     <% end %>
   </div>
-  <p>
+  <div class="form-group">
     <%= f.submit %>
-  </p>
+  </div>
 <% end %>
 
 

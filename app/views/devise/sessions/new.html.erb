@@ -1,3 +1,4 @@
+<% provide(:title, "Sign In") %>
 <body class="main">
 
 <div class="login-screen"></div>
@@ -20,6 +21,7 @@
                                <div class="input-group">
                                <%= f.email_field :email, 
                                 :class => "form-control",
+                                autofocus: true,
                                 :placeholder => " Type your email" %>
                                     <span class="input-group-addon">
                                     <i class="glyphicon glyphicon-user"></i>

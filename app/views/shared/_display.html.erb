@@ -3,7 +3,7 @@
     <% recipes.each do |recipe| %>
       <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
-          <img src="..." alt="...">
+          <%= image_tag recipe.image_url %>
         </div> 
         <div class="caption">
           <p><%= recipe.title %></p>
@@ -14,8 +14,7 @@
                                    method: :delete,
                                    data: { confirm: "Are you sure?" },
                                    class: "btn btn-danger" %>
-          <% end %>
-          </p>
+          <% end %></p>
         </div>
       </div>
     <% end %>
