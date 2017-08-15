@@ -4,7 +4,12 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   get 'help', to: 'pages#help'
   resources :recipes
-  
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
+  resources :relationships,       only: [:create, :destroy]
   
 
   # Example resource route with options:
