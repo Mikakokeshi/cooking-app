@@ -8,7 +8,7 @@
     <% recipes.each do |recipe| %>
       <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
-          <img src="..." alt="...">
+          <%= image_tag recipe.image_url %>
         </div> 
         <div class="caption">
           <p><%= recipe.title %></p>
