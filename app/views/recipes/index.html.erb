@@ -1,27 +1,6 @@
 <% provide(:title, "My Recipes") %>
 <h1>My Recipes</h1>
-
-<% @recipes.each_slice(3) do |recipes| %>
-  <div class="row">
-    <% recipes.each do |recipe| %>
-      <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
-          <img src="..." alt="...">
-        </div> 
-        <div class="caption">
-          <p><%= recipe.title %></p>
-          <p><%= recipe.content %></p>
-          <p><%= link_to "View", recipe_path(recipe), class: "btn btn-primary"%>       
-             <%= link_to "Delete", recipe_path(recipe), 
-                                   method: :delete,
-                                   data: { confirm: "Are you sure?" },
-                                   class: "btn btn-default" %>
-          </p>
-        </div>
-      </div>
-    <% end %>
-  </div>
-<% end %>
+<%= render 'shared/display' %>
 
 
 
