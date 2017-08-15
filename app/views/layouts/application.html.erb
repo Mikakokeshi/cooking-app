@@ -3,7 +3,6 @@
 <head>
   <title><%= yield :title %></title>
   <%= render "layouts/rails_default" %>
-  <%= render "layouts/devise_views" %>
 </head>
 <body>
   <%= render 'layouts/nav' %>
@@ -11,10 +10,6 @@
   
   <div class="container">
     <%= yield %>
-  </div>
-  
-  <div class="containter-fluid footer">
-    <%= render 'layouts/footer' %>
   </div>
   
 </body>
