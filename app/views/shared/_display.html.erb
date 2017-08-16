@@ -5,8 +5,9 @@
       <div class="col-sm-6 col-md-4">
  
        <div id="post-head">
-        <p> <%= image_tag recipe.user.avatar_url, id: "avatar-post" %><%= recipe.user.username %>
-        <%= time_ago_in_words(recipe.created_at) %>
+        <p> <%= image_tag recipe.user.avatar_url, id: "avatar-post" %><%= recipe.user.username %></p>
+        
+        <%= time_ago_in_words(recipe.created_at) %> ago
        </div>
        
     
