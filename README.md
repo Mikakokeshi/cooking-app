@@ -16,7 +16,7 @@ Productive people try to find time to cook for themselves to ensure that they ar
  - Calorie counter -> will list down each recipes' caloric content.
 
 ### Tech used
-* [Ruby on Rials](http://rubyonrails.org/)
+* [Ruby on Rails](http://rubyonrails.org/)
 * [Cloud9](https://c9.io/)
 * [Trello](https://trello.com/)
 * [Github](https://github.com/)
@@ -32,5 +32,7 @@ We started off by using Trello to create ideas for this project. Chompchamp was 
 In the process of making this app we experienced working remotely since both of us were sometimes absent from class. We made extensive use of slack to communicate and github for collaboration and version control. Cloud9 was extremely useful since it allowed us to have the same development environment despite workin on different PCs.
 
 Authors:
+
 Mikako Iijima,
+
 Trevor Cruz
