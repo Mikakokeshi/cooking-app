@@ -45,6 +45,11 @@ body {
     font-family: 'Raleway',sans-serif;
     position: relative;
     /*background: rgba(0, 0, 0, 0) url("../img/ptn.png") repeat scroll 0 0;*/
+     padding-bottom: 150px;
+}
+
+.row {
+    padding-bottom: 20px;
 }
 
 .in-page {
@@ -165,4 +170,14 @@ a:hover, a:focus {
 .login .forgot {
     display: inline-block;
     margin: 20px 0;
+}
+
+.footer {
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 50px;
+  background-color: #f5f5f5;
+  text-align:center;
+  padding:15px;
 }
