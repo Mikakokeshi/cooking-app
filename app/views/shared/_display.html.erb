@@ -15,8 +15,9 @@
           <%= image_tag recipe.image_url %>
         </div> 
         <div class="caption">
-          <p><%= link_to(recipe.title, "/recipes/#{recipe.id}") %>
-          <p><%= link_to(recipe.content, "/recipes/#{recipe.id}") %></p>
+          <p><%= recipe.title %></p>
+          <p><a href="<%= user_path(recipe.user) %>"><%= image_tag recipe.user.avatar_url %> <%= recipe.user.username %></a></a></p>
+          <p><%= recipe.content %></p>
           <p><%= link_to "View", recipe_path(recipe), class: "btn btn-warning"%>
           <% if current_user[:id] == recipe[:user_id] %>
              <%= link_to "Delete", recipe_path(recipe), 
@@ -25,7 +26,7 @@
                                    class: "btn btn-danger" %>
           <% end %></p>
         </div>
-  </div>
+      </div>
     <% end %>
   </div>
 <% end %>
