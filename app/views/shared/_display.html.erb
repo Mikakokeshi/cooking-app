@@ -1,13 +1,21 @@
 <% @recipes.each_slice(3) do |recipes| %>
   <div class="row">
     <% recipes.each do |recipe| %>
+
       <div class="col-sm-6 col-md-4">
+ 
+       <div id="post-head">
+        <p> <%= image_tag recipe.user.avatar_url, id: "avatar-post" %><%= recipe.user.username %>
+        <%= time_ago_in_words(recipe.created_at) %>
+       </div>
+       
+    
         <div class="thumbnail">
           <%= image_tag recipe.image_url %>
         </div> 
         <div class="caption">
-          <p><%= recipe.title %></p>
-          <p><%= recipe.content %></p>
+          <p><%= link_to(recipe.title, "/recipes/#{recipe.id}") %>
+          <p><%= link_to(recipe.content, "/recipes/#{recipe.id}") %></p>
           <p><%= link_to "View", recipe_path(recipe), class: "btn btn-warning"%>
           <% if current_user[:id] == recipe[:user_id] %>
              <%= link_to "Delete", recipe_path(recipe), 
@@ -16,7 +24,7 @@
                                    class: "btn btn-danger" %>
           <% end %></p>
         </div>
-      </div>
+  </div>
     <% end %>
   </div>
 <% end %>
