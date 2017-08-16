@@ -1,16 +1,16 @@
 <div class="row">
   <div class="col col-md-6">
-    <p><%= link_to "Done", recipes_path, class: "btn btn-default" %>
+    <p><%= link_to "Done", root_path, class: "btn btn-default" %>
     <% if current_user[:id] == @recipe[:user_id] %>
       <%= link_to "Edit", edit_recipe_path(@recipe), class: "btn btn-default" %>
     <% end %></p>
+    <p><a href="<%= user_path(@recipe.user) %>"><%= image_tag @recipe.user.avatar_url %> <%= @recipe.user.username %></a></p>
 
     <div class="thumbnail">
       <%= image_tag @recipe.image_url %>
     </div>
     <div class="caption">
       <p><%= @recipe.title %></div></p>
-      <p><a href="<%= user_path(recipe.user) %>"><%= image_tag recipe.user.avatar_url %> <%= recipe.user.username %></a></a></p>
       <p><%= @recipe.content %></div></p>
     </div>
   </div>  

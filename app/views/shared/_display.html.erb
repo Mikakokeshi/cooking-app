@@ -5,8 +5,7 @@
       <div class="col-sm-6 col-md-4">
  
        <div id="post-head">
-        <p> <%= image_tag recipe.user.avatar_url, id: "avatar-post" %><%= recipe.user.username %></p>
-        
+        <p><a href="<%= user_path(recipe.user) %>"><%= image_tag recipe.user.avatar_url %> <%= recipe.user.username %></a></p>
         <%= time_ago_in_words(recipe.created_at) %> ago
        </div>
        
@@ -16,7 +15,6 @@
         </div> 
         <div class="caption">
           <p><%= recipe.title %></p>
-          <p><a href="<%= user_path(recipe.user) %>"><%= image_tag recipe.user.avatar_url %> <%= recipe.user.username %></a></a></p>
           <p><%= recipe.content %></p>
           <p><%= link_to "View", recipe_path(recipe), class: "btn btn-warning"%>
           <% if current_user[:id] == recipe[:user_id] %>
