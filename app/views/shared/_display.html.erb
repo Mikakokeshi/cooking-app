@@ -1,7 +1,16 @@
 <% @recipes.each_slice(3) do |recipes| %>
   <div class="row">
     <% recipes.each do |recipe| %>
+
       <div class="col-sm-6 col-md-4">
+ 
+       <div id="post-head">
+        <p> <%= image_tag recipe.user.avatar_url, id: "avatar-post" %><%= recipe.user.username %></p>
+        
+        <%= time_ago_in_words(recipe.created_at) %> ago
+       </div>
+       
+    
         <div class="thumbnail">
           <%= image_tag recipe.image_url %>
         </div> 
