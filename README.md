@@ -29,7 +29,7 @@ This app was created as a final project for our 2nd term in Vivixx coding bootca
 
 We started off by using Trello to create ideas for this project. Chompchamp was inspired by a famous recipe site in Japan called cookpad. At the onset we did not really have a differentiating factor against similar apps currently in the market. So instead of competing with them directly we decided to make this into a cross between a cooking app and a productivity app.
 
-In the process of making this app we experienced working remotely since both of us were sometimes absent from class. We made extensive use of slack to communicate and github for collaboration and version control. Cloud9 was extremely usefull since it allowed us to have the same development environment despite workin on different PCs.
+In the process of making this app we experienced working remotely since both of us were sometimes absent from class. We made extensive use of slack to communicate and github for collaboration and version control. Cloud9 was extremely useful since it allowed us to have the same development environment despite workin on different PCs.
 Authors:
 Mikako Iijima
 Trevor Cruz
