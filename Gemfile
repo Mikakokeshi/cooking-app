@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+
+gem 'ratyrate'
 # Bootstrap-sass
 gem 'bootstrap-sass', '~> 3.3.6'
 # Devise-bootstrap-views
