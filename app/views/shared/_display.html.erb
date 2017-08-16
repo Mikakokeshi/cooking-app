@@ -7,6 +7,7 @@
         </div> 
         <div class="caption">
           <p><%= recipe.title %></p>
+          <p><a href="<%= user_path(recipe.user) %>"><%= image_tag recipe.user.avatar_url %> <%= recipe.user.username %></a></a></p>
           <p><%= recipe.content %></p>
           <p><%= link_to "View", recipe_path(recipe), class: "btn btn-warning"%>
           <% if current_user[:id] == recipe[:user_id] %>
