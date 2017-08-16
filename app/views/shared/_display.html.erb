@@ -14,7 +14,7 @@
           <%= image_tag recipe.image_url %>
         </div> 
         <div class="caption">
-          <p><%= rating_for recipe, 'recipe', star: 5 %></p>
+          <p><%= rating_for recipe, 'recipe', cancel_hint: 'Cancel this rating!' %></p>
           <p><%= recipe.title %></p>
           <p><%= recipe.content %></p>
           <p><%= link_to "View", recipe_path(recipe), class: "btn btn-warning"%>

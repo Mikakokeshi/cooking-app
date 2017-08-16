@@ -12,7 +12,7 @@
       <%= image_tag @recipe.image_url %>
     </div>
     <div class="caption">
-      <p><%= rating_for @recipe, 'recipe', star:5 %></p>
+      <p><%= rating_for @recipe, 'recipe', cancel_hint: 'Cancel this rating!' %></p>
       <p><%= @recipe.title %></div></p>
       <p><%= @recipe.content %></div></p>
      
