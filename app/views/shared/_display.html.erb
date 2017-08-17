@@ -15,8 +15,8 @@
         </div> 
         <div class="caption">
           <p><%= rating_for recipe, 'recipe', cancel_hint: 'Cancel this rating!' %></p>
-          <p><%= recipe.title %></p>
-          <p><%= recipe.ingredients %></p>
+          <p><%= simple_format(recipe.ingredients) %></p>
+          <p><%= simple_format(recipe.procedure) %></p>
           <p><%= link_to "View", recipe_path(recipe), class: "btn btn-warning"%>
           <% if current_user[:id] == recipe[:user_id] %>
              <%= link_to "Delete", recipe_path(recipe), 
