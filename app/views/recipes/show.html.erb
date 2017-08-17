@@ -6,7 +6,7 @@
     <% end %></p>
     
 
-    <p><a href="<%= user_path(@recipe.user) %>"><%= image_tag @recipe.user.avatar_url %> <%= @recipe.user.username %></a></p>
+    <p><a href="<%= user_path(@recipe.user) %>"><%= image_tag(@recipe.user.avatar_url, class: "userpic") %> <%= @recipe.user.username %></a></p>
 
     <div class="thumbnail">
       <%= image_tag @recipe.image_url %>

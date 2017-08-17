@@ -5,7 +5,7 @@
       <div class="col-sm-6 col-md-4">
  
        <div id="post-head">
-        <p><a href="<%= user_path(recipe.user) %>"><%= image_tag recipe.user.avatar_url, id: "userpic" %> <%= recipe.user.username %></a></p>
+        <p><a href="<%= user_path(recipe.user) %>"><%= image_tag recipe.user.avatar_url, class: "userpic" %> <%= recipe.user.username %></a></p>
         <%= time_ago_in_words(recipe.created_at) %> ago
        </div>
        
