@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 
 gem 'ratyrate'
+gem 'rails_db'
 # Bootstrap-sass
 gem 'bootstrap-sass', '~> 3.3.6'
 # Devise-bootstrap-views

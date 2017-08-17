@@ -1,4 +1,9 @@
 # Chompchamp
+Find and share everyday cooking inspiration.
+
+The more you know, the more you can create.
+
+There is no end to imagination in the kitchen.
 
 Chompchamp is a recipe site that aims to make food preparation easy. 
 
