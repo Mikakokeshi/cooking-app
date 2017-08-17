@@ -21,6 +21,10 @@
     <%= f.text_area :ingredients, class: "form-control" %>
   </div>
   <div class="form-group">
+    <%= f.label :procedure %><br>
+    <%= f.text_area :procedure, class: "form-control" %>
+  </div>
+  <div class="form-group">
     <%= f.label :image %><br>
     <%= f.file_field :image %>
     <% if f.object.image? %>
