@@ -219,7 +219,28 @@ footer {
 
 
 .about_right {
+    padding-top:10px;
     font-size:20px;
     margin:0 auto;
-    opacity:0.7;
+    text-align:center;
+    opacity:0.8;
+}
+
+
+.about-screen {
+  z-index:-3;
+    /*background-image: url(http://nabe.moranbong.co.jp/files/topics/2800_ext_05_1.jpg);*/
+    opacity:1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity:0.2;
 }
