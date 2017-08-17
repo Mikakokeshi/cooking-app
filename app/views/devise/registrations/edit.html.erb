@@ -1,5 +1,4 @@
 
-<div class="login-screen"></div>
 <% provide(:title, "Edit Profile") %>
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
@@ -43,9 +42,9 @@
       <%= f.file_field :avatar %>
       <%= f.hidden_field :avatar_cache %>
       <% if f.object.avatar? %>
-        <%= image_tag f.object.avatar_url %>
-        <%= f.label :remove_avatar %>
-        <%= f.check_box :remove_avatar %> 
+        <%= image_tag(f.object.avatar_url, id: "image")  %>
+        <p><%= f.label :remove_avatar %>
+        <%= f.check_box :remove_avatar %></p> 
       <% end %>
     <% end %>
   </div>

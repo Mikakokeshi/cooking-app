@@ -123,7 +123,7 @@ a:hover, a:focus {
     min-height: 380px;
 }
 
-.login-screen {
+.login-img {
     z-index:-3;
     background-image: url(http://nabe.moranbong.co.jp/files/topics/2800_ext_05_1.jpg);
     opacity:1;
@@ -243,9 +243,13 @@ footer {
     -moz-background-size: cover;
     -webkit-background-size: cover;
     position: fixed;
-    top: 0;
     bottom: 0;
     right: 0;
     left: 0;
     opacity:0.2;
+}
+
+#image{
+    width:300px;
+    height:300px;
 }
